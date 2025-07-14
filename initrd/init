@@ -88,7 +88,7 @@ check_root()
 	fi
 
 	if [ -z "${RECOVERY_ISOBOOT}" ]; then
-		try_mount ro $dev /mnt || return 1
+		try_mount ro $1 /mnt && [ -e /mnt/$SRC/ramdisk-recovery.img ]
 		if [ -n "$iso" -a -e /mnt/$iso ]; then
 			mount --move /mnt /iso
 			mkdir /mnt/iso
