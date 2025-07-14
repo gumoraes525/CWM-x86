@@ -10,7 +10,7 @@
 # with Android-x86 project.
 #
 
-# Forcefully disable install on TWRP ISO
+# Forcefully disable install on CWM ISO
 export INSTALL=0
 
 if [ ! -z "${RECOVERY_ISOBOOT}" ]; then
