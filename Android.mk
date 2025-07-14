@@ -80,7 +80,7 @@ $(boot_dir): $(wildcard $(LOCAL_PATH)/boot/isolinux/*) $(systemimg) $(GENERIC_X8
 	rm -rf $@
 	$(ACP) -pr $(dir $(<D)) $@
 
-BUILT_IMG := $(addprefix $(PRODUCT_OUT)/,ramdisk.img initrd.img install.img) $(systemimg)
+BUILT_IMG := $(addprefix $(PRODUCT_OUT)/,ramdisk.img ramdisk-recovery.img initrd.img install.img) $(systemimg) 
 BUILT_IMG += $(if $(TARGET_PREBUILT_KERNEL),$(TARGET_PREBUILT_KERNEL),$(PRODUCT_OUT)/kernel)
 
 ISO_IMAGE := $(PRODUCT_OUT)/$(TARGET_PRODUCT).iso
